@@ -1,0 +1,12 @@
+{
+  "name": "@prawn/core",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "effect": "^3.21.3",
+    "partial-json": "^0.1.7"
+  }
+}

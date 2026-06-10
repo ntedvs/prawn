@@ -1,0 +1,12 @@
+{
+  "name": "@prawn/providers",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@prawn/core": "workspace:*",
+    "effect": "^3.21.3"
+  }
+}

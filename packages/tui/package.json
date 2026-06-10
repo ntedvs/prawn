@@ -1,0 +1,14 @@
+{
+  "name": "@prawn/tui",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@opentui/core": "^0.4.0",
+    "@opentui/solid": "^0.4.0",
+    "@prawn/core": "workspace:*",
+    "@prawn/providers": "workspace:*",
+    "@prawn/tools": "workspace:*",
+    "effect": "^3.21.3",
+    "solid-js": "^1.9.13"
+  }
+}

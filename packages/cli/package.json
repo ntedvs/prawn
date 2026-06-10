@@ -1,0 +1,11 @@
+{
+  "name": "@prawn/cli",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@prawn/core": "workspace:*",
+    "@prawn/providers": "workspace:*",
+    "@prawn/tools": "workspace:*",
+    "effect": "^3.21.3"
+  }
+}
