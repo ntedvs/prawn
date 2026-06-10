@@ -70,10 +70,8 @@ export const toToolDefinitions = (
   tools: ReadonlyArray<AnyAgentTool>,
 ): Array<Record<string, unknown>> =>
   tools.map((tool) => {
-    const { $schema: _, ...parameters } = JSONSchema.make(tool.params) as unknown as Record<
-      string,
-      unknown
-    >
+    const fromEffect = JSONSchema.make(tool.params) as unknown as Record<string, unknown>
+    const { $schema: _, ...parameters } = tool.jsonSchema ?? fromEffect
     return {
       type: "function",
       name: tool.name,

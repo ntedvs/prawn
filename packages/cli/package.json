@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@prawn/core": "workspace:*",
+    "@prawn/mcp": "workspace:*",
     "@prawn/providers": "workspace:*",
     "@prawn/tools": "workspace:*",
     "effect": "^3.21.3"

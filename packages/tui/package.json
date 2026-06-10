@@ -6,6 +6,7 @@
     "@opentui/core": "^0.4.0",
     "@opentui/solid": "^0.4.0",
     "@prawn/core": "workspace:*",
+    "@prawn/mcp": "workspace:*",
     "@prawn/providers": "workspace:*",
     "@prawn/tools": "workspace:*",
     "effect": "^3.21.3",

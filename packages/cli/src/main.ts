@@ -9,11 +9,11 @@ import {
   runAgent,
   sessionStorePersistent,
   steeringLive,
-  toolRegistryLayer,
   userText,
   type AgentEvent,
   type SessionHandle,
 } from "@prawn/core"
+import { mcpToolRegistryLayer } from "@prawn/mcp"
 import { codexProviderLayer, hasOpenAIAuth, loginOpenAI, mockProviderLayer } from "@prawn/providers"
 import { bashTool } from "@prawn/tools"
 
@@ -102,8 +102,8 @@ const live = Layer.mergeAll(
   eventBusLive,
   sessionStorePersistent(handle),
   steeringLive,
-  toolRegistryLayer([bashTool]),
-  useMock ? mockProviderLayer : codexProviderLayer(),
+  mcpToolRegistryLayer([bashTool], { cwd }),
+  useMock ? mockProviderLayer : codexProviderLayer({ cwd }),
 )
 
 Effect.runPromise(program(prompt).pipe(Effect.provide(live))).catch((error) => {

@@ -5,7 +5,7 @@
   ],
   "scripts": {
     "dev": "bun packages/cli/src/main.ts",
-    "tui": "cd packages/tui && bun --preload @opentui/solid/preload src/index.tsx",
+    "tui": "bun --preload @opentui/solid/preload packages/tui/src/index.tsx"
   },
   "devDependencies": {
     "@types/bun": "^1.3.14",

@@ -85,10 +85,6 @@ export const App = (props: {
       </scrollbox>
 
       <box flexDirection="column" flexShrink={0}>
-        <text
-          content={`prawn · ${props.provider} · ${store.status}  (esc to interrupt, ^C to quit)`}
-          fg={COLORS.dim}
-        />
         <box height={3} border borderColor="#374151">
           <input
             focused
@@ -98,6 +94,10 @@ export const App = (props: {
             onSubmit={submit as never}
           />
         </box>
+        <text
+          content={`prawn · ${props.provider} · ${store.status}  (esc to interrupt, ^C to quit)`}
+          fg={COLORS.dim}
+        />
       </box>
     </box>
   )

@@ -61,7 +61,7 @@ const Root = () => {
   // Build the session exactly once, when a handle exists.
   const ready = createMemo(() => {
     const h = handle()
-    return h ? { session: createSession(liveLayer(h)), handle: h } : null
+    return h ? { session: createSession(liveLayer(h, cwd)), handle: h } : null
   })
 
   return (

@@ -15,6 +15,7 @@ export interface AgentTool<I = unknown> {
   readonly name: string
   readonly description: string
   readonly params: Schema.Schema<I, any, never>
+  readonly jsonSchema?: Record<string, unknown>
   readonly readonly: boolean
   readonly execute: (input: I) => Effect.Effect<string, ToolFailure>
 }
